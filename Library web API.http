@@ -1,0 +1,44 @@
+﻿@API_HostAddress = https://localhost:7062
+
+@id=0
+GET {{API_HostAddress}}/book/1
+
+###
+
+GET {{API_HostAddress}}/book
+
+###
+
+POST {{API_HostAddress}}/book
+Content-Type: application/json
+
+{
+  "title" : "Mertag",
+  "author" : "Christofer Paolini",
+  "category" : 0,
+  "numberOfCopies" : 3
+}
+
+###
+
+POST {{API_HostAddress}}/reservation
+Content-Type: application/json
+
+{
+  "date" : "2025-09-01",
+  "borrowerName" : "Petros",
+  "bookId" : 1
+}
+
+###
+
+GET {{API_HostAddress}}/reservation/1
+
+###
+
+PUT {{API_HostAddress}}/reservation
+Content-Type: application/json
+
+"Petros"
+
+###
